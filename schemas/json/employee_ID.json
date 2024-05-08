@@ -2,7 +2,8 @@
     "$metadata": {
         "type": "empolyeeIDverification",
         "uris": {
-            "jsonLdContext": "ipfs://QmTmcc6aaMA3azYoSGgRNbzRhoZPZnfK6c4uTjZmJy8fyw"
+            "jsonLdContext": "https://raw.githubusercontent.com/Chanduatnonceblox/claim-schema-vocab/main/schemas/json-ld/employee_ID.jsonld",
+            "jsonSchema": "https://raw.githubusercontent.com/Chanduatnonceblox/claim-schema-vocab/main/schemas/json/employee_ID.json"
         },
         "version": "1.0"
     },
