@@ -1,0 +1,354 @@
+{
+  "$metadata": {
+    "type": "persona",
+    "uris": {
+      "jsonLdContext": "https://raw.githubusercontent.com/Chanduatnonceblox/claim-schema-vocab/main/schemas/json-ld/travlr-id-profile.jsonld"
+    },
+    "version": "1.0.1"
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Personal and professional profile details on travlrID application",
+  "title": "TravlrID Profile ",
+  "properties": {
+    "@context": {
+      "type": [
+        "string",
+        "array",
+        "object"
+      ]
+    },
+    "expirationDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "issuanceDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "issuer": {
+      "type": [
+        "string",
+        "object"
+      ],
+      "format": "uri",
+      "properties": {
+        "id": {
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "type": {
+      "type": [
+        "string",
+        "array"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "credentialSubject": {
+      "description": "Stores the data of the credential",
+      "title": "Credential subject",
+      "properties": {
+        "Traveler_ID_Number": {
+          "description": "ID in Traveler ID application",
+          "title": "Traveler ID number",
+          "type": "number"
+        },
+        "id": {
+          "description": "Stores the DID of the subject that owns the credential",
+          "title": "Credential subject ID",
+          "format": "uri",
+          "type": "string"
+        },
+        "Personal_Details": {
+          "description": "Personal details of employee to verify via credentials",
+          "title": "Personal details of employee",
+          "properties": {
+            "First-name": {
+              "description": "first name of employee",
+              "title": "first name of employee",
+              "type": "string"
+            },
+            "Middle-name": {
+              "description": "Middle name of employee",
+              "title": "Middle name of employee",
+              "type": "string"
+            },
+            "Last-name": {
+              "description": "Last name of employee",
+              "title": "Last name of employee",
+              "type": "string"
+            },
+            "Date-of-birth": {
+              "$comment": "In DD/MM/YY format",
+              "description": "Date of birth of employee",
+              "title": "Date of birth of employee",
+              "type": "number"
+            },
+            "Gender": {
+              "description": "Gender of employee",
+              "enum": [
+                "Male",
+                "Female",
+                "Rather not to say"
+              ],
+              "title": "Gender of employee",
+              "type": "string"
+            },
+            "Maritial-status": {
+              "description": "martial status of employee",
+              "enum": [
+                "single",
+                "married",
+                "widowed",
+                "divorced",
+                "separated"
+              ],
+              "title": "martial status of employee",
+              "type": "string"
+            },
+            "Nationality": {
+              "description": "Nationality of the employee",
+              "title": "Nationality of the employee",
+              "type": "string"
+            },
+            "Blood-type": {
+              "description": "Blood type of employee",
+              "enum": [
+                "A positive (A+)",
+                "A negative (A-)",
+                "B positive (B+)",
+                "B negative (B-)",
+                "AB positive (AB+)",
+                "AB negative (AB-)",
+                "O positive (O+)",
+                "O negative (O-)"
+              ],
+              "title": "Blood type of employee",
+              "type": "string"
+            },
+            "Main_Language": {
+              "description": "Main language / Mother tongue",
+              "title": "Main language / Mother tongue",
+              "type": "string"
+            }
+          },
+          "required": [
+            "First-name",
+            "Last-name",
+            "Date-of-birth",
+            "Blood-type"
+          ],
+          "type": "object"
+        },
+        "Contact_Details": {
+          "description": "Contact details of employee",
+          "title": "Contact details of employee",
+          "properties": {
+            "Email-id": {
+              "description": "Email id of employee",
+              "title": "Email id of employee",
+              "type": "string"
+            },
+            "Secondary-email-id": {
+              "description": "Secondary email id of employee",
+              "title": "Secondary email id of employee",
+              "type": "string"
+            },
+            "Contact-number": {
+              "description": "Contact number of employee",
+              "title": "Contact number of employee",
+              "type": "string"
+            },
+            "secondary-contact-number": {
+              "description": "Secondary contact number of employee",
+              "title": "Secondary contact number of employee",
+              "type": "string"
+            },
+            "Emergency-contact": {
+              "description": "Emergency contact of employee",
+              "title": "Emergency contact of employee",
+              "properties": {
+                "Emergency-contact-name": {
+                  "description": "Name of emergency contact person",
+                  "title": "Name of emergency contact person",
+                  "type": "string"
+                },
+                "Emergency-contact-number": {
+                  "description": "Contact number of emergency contact person",
+                  "title": "Contact number of emergency contact person",
+                  "type": "string"
+                },
+                "Emergency-contact-person-relationship": {
+                  "description": "Relationship with emergency contact person ",
+                  "title": "Relationship with emergency contact person ",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "Emergency-contact-name",
+                "Emergency-contact-number"
+              ],
+              "type": "object"
+            }
+          },
+          "required": [
+            "Email-id",
+            "Contact-number",
+            "Emergency-contact"
+          ],
+          "type": "object"
+        },
+        "Identity_Documents": {
+          "description": "Identity documents of employee",
+          "title": "Identity documents of employee",
+          "properties": {
+            "Passport": {
+              "description": "Passport details of employee",
+              "title": "Passport details of employee",
+              "properties": {
+                "Passport-number": {
+                  "description": "Passport number",
+                  "title": "Passport number",
+                  "type": "string"
+                },
+                "Date-of-issuence": {
+                  "$comment": "In DD/MM/YY format",
+                  "description": "Passport issuance date",
+                  "title": "Passport issuance date",
+                  "type": "number"
+                },
+                "Date-of-expiry": {
+                  "$comment": "In DD/MM/YY format",
+                  "description": "Expiration date of passport",
+                  "title": "Expiration date of passport",
+                  "type": "number"
+                },
+                "Nationality": {
+                  "description": "Passport nationality",
+                  "title": "Passport nationality",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "Passport-number",
+                "Date-of-expiry",
+                "Nationality"
+              ],
+              "type": "object"
+            },
+            "Driving_License": {
+              "description": "Driving license of employee",
+              "title": "Driving license of employee",
+              "properties": {
+                "Driving-License-Number": {
+                  "description": "Driving license number",
+                  "title": "Driving license number",
+                  "type": "number"
+                },
+                "Issuance-country": {
+                  "description": "Country of issuance",
+                  "title": "Country of issuance",
+                  "type": "string"
+                }
+              },
+              "required": [],
+              "type": "object"
+            },
+            "Visa": {
+              "description": "Visa",
+              "title": "Visa",
+              "properties": {
+                "Date-Of-Issue": {
+                  "$comment": "In DD/MM/YY format",
+                  "description": "Date of issuance of visa",
+                  "title": "Date of issuance of visa",
+                  "type": "number"
+                },
+                "Number": {
+                  "description": "Visa number",
+                  "title": "Visa number",
+                  "type": "string"
+                },
+                "Date-of-Expiry": {
+                  "description": "Date of visa expiry ",
+                  "title": "Date of visa expiry ",
+                  "type": "string"
+                }
+              },
+              "required": [],
+              "type": "object"
+            }
+          },
+          "required": [
+            "Passport"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "Traveler_ID_Number",
+        "Personal_Details",
+        "Contact_Details",
+        "Identity_Documents"
+      ],
+      "type": "object"
+    },
+    "credentialSchema": {
+      "properties": {
+        "id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type"
+      ],
+      "type": "object"
+    },
+    "credentialStatus": {
+      "description": "Allows the discovery of information about the current status of the credential, such as whether it is suspended or revoked.",
+      "title": "Credential Status",
+      "properties": {
+        "id": {
+          "description": "Id URL of the credentialStatus.",
+          "title": "Id",
+          "format": "uri",
+          "type": "string"
+        },
+        "type": {
+          "description": "Expresses the credential status type (method). The value should provide enough information to determine the current status of the credential.",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "@context",
+    "id",
+    "issuanceDate",
+    "issuer",
+    "type",
+    "credentialSubject",
+    "credentialSchema"
+  ],
+  "type": "object"
+}
