@@ -1,0 +1,158 @@
+{
+  "@context": [
+    {
+      "@protected": true,
+      "@version": 1.1,
+      "id": "@id",
+      "type": "@type",
+      "persona": {
+        "@context": {
+          "@propagate": true,
+          "@protected": true,
+          "polygon-vocab": "urn:uuid:8f6edc23-0170-4cb7-bb0f-39d85686c144#",
+          "xsd": "http://www.w3.org/2001/XMLSchema#",
+          "Traveler_ID_Number": {
+            "@id": "polygon-vocab:Traveler_ID_Number",
+            "@type": "xsd:double"
+          },
+          "Personal_Details": {
+            "@context": {
+              "First-name": {
+                "@id": "polygon-vocab:First-name",
+                "@type": "xsd:string"
+              },
+              "Middle-name": {
+                "@id": "polygon-vocab:Middle-name",
+                "@type": "xsd:string"
+              },
+              "Last-name": {
+                "@id": "polygon-vocab:Last-name",
+                "@type": "xsd:string"
+              },
+              "Date-of-birth": {
+                "@id": "polygon-vocab:Date-of-birth",
+                "@type": "xsd:double"
+              },
+              "Gender": {
+                "@id": "polygon-vocab:Gender",
+                "@type": "xsd:string"
+              },
+              "Maritial-status": {
+                "@id": "polygon-vocab:Maritial-status",
+                "@type": "xsd:string"
+              },
+              "Nationality": {
+                "@id": "polygon-vocab:Nationality",
+                "@type": "xsd:string"
+              },
+              "Blood-type": {
+                "@id": "polygon-vocab:Blood-type",
+                "@type": "xsd:string"
+              },
+              "Main_Language": {
+                "@id": "polygon-vocab:Main_Language",
+                "@type": "xsd:string"
+              }
+            },
+            "@id": "polygon-vocab:Personal_Details"
+          },
+          "Contact_Details": {
+            "@context": {
+              "Email-id": {
+                "@id": "polygon-vocab:Email-id",
+                "@type": "xsd:string"
+              },
+              "Secondary-email-id": {
+                "@id": "polygon-vocab:Secondary-email-id",
+                "@type": "xsd:string"
+              },
+              "Contact-number": {
+                "@id": "polygon-vocab:Contact-number",
+                "@type": "xsd:string"
+              },
+              "secondary-contact-number": {
+                "@id": "polygon-vocab:secondary-contact-number",
+                "@type": "xsd:string"
+              },
+              "Emergency-contact": {
+                "@context": {
+                  "Emergency-contact-name": {
+                    "@id": "polygon-vocab:Emergency-contact-name",
+                    "@type": "xsd:string"
+                  },
+                  "Emergency-contact-number": {
+                    "@id": "polygon-vocab:Emergency-contact-number",
+                    "@type": "xsd:string"
+                  },
+                  "Emergency-contact-person-relationship": {
+                    "@id": "polygon-vocab:Emergency-contact-person-relationship",
+                    "@type": "xsd:string"
+                  }
+                },
+                "@id": "polygon-vocab:Emergency-contact"
+              }
+            },
+            "@id": "polygon-vocab:Contact_Details"
+          },
+          "Identity_Documents": {
+            "@context": {
+              "Passport": {
+                "@context": {
+                  "Passport-number": {
+                    "@id": "polygon-vocab:Passport-number",
+                    "@type": "xsd:string"
+                  },
+                  "Date-of-issuence": {
+                    "@id": "polygon-vocab:Date-of-issuence",
+                    "@type": "xsd:double"
+                  },
+                  "Date-of-expiry": {
+                    "@id": "polygon-vocab:Date-of-expiry",
+                    "@type": "xsd:double"
+                  },
+                  "Nationality": {
+                    "@id": "polygon-vocab:Nationality",
+                    "@type": "xsd:string"
+                  }
+                },
+                "@id": "polygon-vocab:Passport"
+              },
+              "Driving_License": {
+                "@context": {
+                  "Driving-License-Number": {
+                    "@id": "polygon-vocab:Driving-License-Number",
+                    "@type": "xsd:double"
+                  },
+                  "Issuance-country": {
+                    "@id": "polygon-vocab:Issuance-country",
+                    "@type": "xsd:string"
+                  }
+                },
+                "@id": "polygon-vocab:Driving_License"
+              },
+              "Visa": {
+                "@context": {
+                  "Date-Of-Issue": {
+                    "@id": "polygon-vocab:Date-Of-Issue",
+                    "@type": "xsd:double"
+                  },
+                  "Number": {
+                    "@id": "polygon-vocab:Number",
+                    "@type": "xsd:string"
+                  },
+                  "Date-of-Expiry": {
+                    "@id": "polygon-vocab:Date-of-Expiry",
+                    "@type": "xsd:string"
+                  }
+                },
+                "@id": "polygon-vocab:Visa"
+              }
+            },
+            "@id": "polygon-vocab:Identity_Documents"
+          }
+        },
+        "@id": "urn:uuid:482de310-a77b-4ebe-9440-5f927afeaa0f"
+      }
+    }
+  ]
+}
