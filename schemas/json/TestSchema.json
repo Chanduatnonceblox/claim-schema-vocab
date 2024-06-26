@@ -1,7 +1,7 @@
 {
     "$metadata": {
         "uris": {
-            "jsonLdContext": "https://example.com/path/to/file/context.jsonld"
+            "https://raw.githubusercontent.com/Chanduatnonceblox/claim-schema-vocab/main/schemas/json-ld/TestSchema.jsonld"
         },
         "version": "1.0",
         "type": "TestUser"
