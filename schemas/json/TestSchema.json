@@ -35,9 +35,9 @@
                     "title": "Age",
                     "type": "number"
                 },
-                "green-card": {
+                "green_card": {
                     "description": "user Green-Card number",
-                    "title": "Green-Card",
+                    "title": "Green Card",
                     "type": "number"
                 }
             },
