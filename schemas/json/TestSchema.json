@@ -45,7 +45,7 @@
                 "name",
                 "email",
                 "age",
-                "green-card"
+                "green_card"
             ],
             "type": "object"
         },
