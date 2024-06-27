@@ -9,7 +9,7 @@
                 "@context": {
                     "@propagate": true,
                     "@protected": true,
-                    "polygon-vocab": "urn:uuid:7ea434fd-4835-45a7-ac6c-8299ca717911#",
+                    "polygon-vocab": "urn:uuid:3e6f6b05-2c0c-4e26-904c-dd05feab397d#",
                     "xsd": "http://www.w3.org/2001/XMLSchema#",
                     "name": {
                         "@id": "polygon-vocab:name",
@@ -23,12 +23,12 @@
                         "@id": "polygon-vocab:age",
                         "@type": "xsd:double"
                     },
-                    "green-card": {
-                        "@id": "polygon-vocab:green-card",
+                    "green_card": {
+                        "@id": "polygon-vocab:green_card",
                         "@type": "xsd:double"
                     }
                 },
-                "@id": "urn:uuid:fe2378b7-c06d-46ca-9778-c6269ec39045"
+                "@id": "urn:uuid:ebdb6164-12a5-4b52-99a8-0fa4097189b1"
             }
         }
     ]
