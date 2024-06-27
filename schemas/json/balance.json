@@ -2,7 +2,7 @@
     "$metadata": {
         "type": "BalanceCredential",
         "uris": {
-            "jsonLdContext": "ipfs://QmbbTKPTJy5zpS2aWBRps1duU8V3zC84jthpWDXE9mLHBX"
+            "jsonLdContext": "https://raw.githubusercontent.com/Chanduatnonceblox/claim-schema-vocab/main/schemas/json-ld/balanceCredentail.json-ld"
         },
         "version": "10.0"
     },
